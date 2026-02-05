@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres:16
+    container_name: pizza_db_local
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: pizza_app
+    ports:
+    - "5432:5432"
